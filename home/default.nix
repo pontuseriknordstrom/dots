@@ -10,11 +10,11 @@
     "hypr".source = ../dots/hyprland;
   };
 
+  # fonts
+  fonts.fontconfig.enable = true;
+
   # user packages
   home.packages = with pkgs; [
-    # shell stuff
-    quickshell
-
     # editor & terminal
     helix
     foot
@@ -23,6 +23,10 @@
     # apps
     _1password-gui
     vesktop
+
+    # shell/bar
+    inputs.tpanel.packages.${stdenv.hostPlatform.system}.default
+    iosevka-bin
 
     # hyprland utils
     brightnessctl
