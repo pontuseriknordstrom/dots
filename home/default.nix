@@ -27,12 +27,30 @@
     gtk.enable = true;
   };
 
+  # Default to dark mode
+  gtk = {
+    enable = true;
+    theme = {
+      name = "Adwaita-dark";
+      package = pkgs.gnome-themes-extra;
+    };
+  };
+
+  dconf.settings = {
+    "org/gnome/desktop/interface" = {
+      color-scheme = "prefer-dark";
+    };
+  };
+
   # User packages
   home.packages = with pkgs; [
     # Editor & terminal
     helix
     foot
     tmux
+
+    # File manager
+    nautilus
 
     # Shell
     fish
