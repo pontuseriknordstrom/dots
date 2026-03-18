@@ -12,6 +12,9 @@
 
   # user packages
   home.packages = with pkgs; [
+    # shell stuff
+    quickshell
+
     # editor & terminal
     helix
     foot
