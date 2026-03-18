@@ -14,6 +14,7 @@
     "foot".source = ../dots/foot;
     "fish/config.fish".source = ../dots/fish/config.fish;
     "starship.toml".source = ../dots/starship/starship.toml;
+    "zathura".source = ../dots/zathura;
   };
 
   # Fonts
@@ -56,6 +57,11 @@
     fish
     starship
 
+    # Media
+    zathura
+    imv
+    mpv
+    
     # Apps
     _1password-gui
     vesktop
