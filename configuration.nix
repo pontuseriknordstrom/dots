@@ -21,6 +21,10 @@
     extraGroups = [ "wheel" "networkmanager" ];
   };
 
+  # default to fish shell
+  programs.fish.enable = true;
+  users.users.tux.shell = pkgs.fish;
+
   # nix settings
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.allowUnfree = true;
