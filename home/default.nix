@@ -11,6 +11,9 @@
     "waybar".source = ../dots/waybar;
     "fuzzel".source = ../dots/fuzzel;
     "mako".source = ../dots/mako;
+    "foot".source = ../dots/foot;
+    "fish/config.fish".source = ../dots/fish/config.fish;
+    "starship.toml".source = ../dots/starship/starship.toml;
   };
 
   # Fonts
@@ -31,6 +34,10 @@
     foot
     tmux
 
+    # Shell
+    fish
+    starship
+
     # Apps
     _1password-gui
     vesktop
@@ -39,8 +46,8 @@
     waybar
     fuzzel
     mako
-    iosevka-bin
     libnotify
+    iosevka-bin
 
     # Hyprland utilities
     brightnessctl
@@ -52,6 +59,9 @@
     # Hyprland extras
     hyprlock
     hyprpicker
+
+    # Browser
+    librewolf
   ];
 
   home.stateVersion = "25.11";

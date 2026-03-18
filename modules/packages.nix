@@ -10,8 +10,5 @@
     wget
     git
     direnv
-
-    # browser (needs to be here since it's from the flake)
-    inputs.zen-browser.packages.${stdenv.hostPlatform.system}.default
   ];
 }

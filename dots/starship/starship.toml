@@ -1,0 +1,49 @@
+format = """
+[┌](bold #555568) $username[@](bold #555568)$hostname $directory$git_branch$git_status$nix_shell
+[└](bold #555568) $character"""
+
+[character]
+success_symbol = "[λ](bold #5ccfe6)"
+error_symbol = "[λ](bold #d4556a)"
+
+[username]
+show_always = true
+format = "[$user]($style)"
+style_user = "#5ccfe6"
+
+[hostname]
+ssh_only = false
+format = "[$hostname]($style) "
+style = "#5ccfe6"
+
+[directory]
+format = "[$path]($style) "
+style = "#c8c8d0"
+truncation_length = 4
+truncate_to_repo = true
+
+[git_branch]
+format = " [$branch]($style) "
+symbol = ""
+style = "#7ec49d"
+
+[git_status]
+format = "[$all_status$ahead_behind]($style)"
+style = "#e0af68"
+
+[nix_shell]
+format = " [$symbol]($style)"
+symbol = "nix"
+style = "#5ccfe6"
+
+[nodejs]
+disabled = true
+
+[python]
+disabled = true
+
+[rust]
+disabled = true
+
+[package]
+disabled = true
