@@ -32,6 +32,14 @@
     hyprlock
   ];
 
+  # change ugly default hyprland cursor
+  home.pointerCursor = {
+    name = "Bibata-Modern-Classic";
+    package = pkgs.bibata-cursors;
+    size = 28;
+    gtk.enable = true;
+  };
+
   home.stateVersion = "25.11";
   programs.home-manager.enable = true;
 }
