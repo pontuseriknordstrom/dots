@@ -1,51 +1,57 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
   home.username = "tux";
   home.homeDirectory = "/home/tux";
 
-  # symlink dotfiles from dots/ into ~/.config/
+  # Symlink dotfiles into ~/.config/
   xdg.configFile = {
     "helix".source = ../dots/helix;
     "hypr".source = ../dots/hyprland;
+    "waybar".source = ../dots/waybar;
+    "fuzzel".source = ../dots/fuzzel;
+    "mako".source = ../dots/mako;
   };
 
-  # fonts
+  # Fonts
   fonts.fontconfig.enable = true;
 
-  # user packages
+  # Cursor
+  home.pointerCursor = {
+    name = "Bibata-Modern-Classic";
+    package = pkgs.bibata-cursors;
+    size = 24;
+    gtk.enable = true;
+  };
+
+  # User packages
   home.packages = with pkgs; [
-    # editor & terminal
+    # Editor & terminal
     helix
     foot
     tmux
 
-    # apps
+    # Apps
     _1password-gui
     vesktop
 
-    # shell/bar
-    inputs.tpanel.packages.${stdenv.hostPlatform.system}.default
+    # Bar / Launcher / Notifications
+    waybar
+    fuzzel
+    mako
     iosevka-bin
 
-    # hyprland utils
+    # Hyprland utilities
     brightnessctl
     playerctl
     grim
     slurp
     wl-clipboard
 
-    # hyprland extras
+    # Hyprland extras
     hyprlock
+    hyprpicker
   ];
-
-  # change ugly default hyprland cursor
-  home.pointerCursor = {
-    name = "Bibata-Modern-Classic";
-    package = pkgs.bibata-cursors;
-    size = 28;
-    gtk.enable = true;
-  };
 
   home.stateVersion = "25.11";
   programs.home-manager.enable = true;

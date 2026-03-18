@@ -1,0 +1,70 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 32,
+  "width": 900,
+  "margin-top": 5,
+  "spacing": 0,
+
+  "modules-left": ["hyprland/workspaces", "hyprland/window"],
+  "modules-center": ["clock"],
+  "modules-right": ["network", "pulseaudio", "battery", "tray"],
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "1": "α",
+      "2": "β",
+      "3": "γ",
+      "4": "δ",
+      "5": "ε",
+      "default": ""
+    },
+    "persistent-workspaces": {
+      "*": [1, 2, 3, 4, 5]
+    },
+    "sort-by": "id",
+    "all-outputs": false
+  },
+
+  "hyprland/window": {
+    "format": "{}",
+    "max-length": 25,
+    "separate-outputs": true,
+    "rewrite": {
+      "": ""
+    }
+  },
+
+  "clock": {
+    "format": "{:%H:%M}",
+    "tooltip-format": "{:%A, %B %d %Y}"
+  },
+
+  "network": {
+    "format-wifi": "{essid}",
+    "format-ethernet": "eth",
+    "format-disconnected": "off",
+    "tooltip-format": "{ifname}: {ipaddr}",
+    "max-length": 12
+  },
+
+  "pulseaudio": {
+    "format": "vol {volume}%",
+    "format-muted": "muted",
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+  },
+
+  "battery": {
+    "format": "{capacity}%",
+    "format-charging": "↑{capacity}%",
+    "states": {
+      "warning": 30,
+      "critical": 15
+    }
+  },
+
+  "tray": {
+    "spacing": 8
+  }
+}

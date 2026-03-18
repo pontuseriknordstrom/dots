@@ -18,11 +18,6 @@
       url = "github:youwen5/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    tpanel = {
-      url = "github:tuxdotrs/tpanel";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = { nixpkgs, home-manager, lanzaboote, ... }@inputs: {
