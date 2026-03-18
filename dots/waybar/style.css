@@ -26,7 +26,7 @@ window#waybar > box {
 #workspaces button {
   padding: 2px 8px;
   margin: 0 1px;
-  color: #3a3a4a;
+  color: #8a8a9a;
   border: none;
   border-radius: 3px;
   background: transparent;
@@ -37,10 +37,6 @@ window#waybar > box {
   color: #5ccfe6;
   font-weight: 700;
   background: rgba(92, 207, 230, 0.12);
-}
-
-#workspaces button.occupied {
-  color: #c8c8d0;
 }
 
 #workspaces button.empty {

@@ -40,6 +40,7 @@
     fuzzel
     mako
     iosevka-bin
+    libnotify
 
     # Hyprland utilities
     brightnessctl
