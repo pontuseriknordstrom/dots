@@ -6,6 +6,6 @@ set inputbar-bg "#1a1a24"
 set inputbar-fg "#c8c8d0"
 set highlight-color "#5ccfe680"
 set highlight-active-color "#5ccfe6"
-set recolor true
+set recolor false
 set recolor-darkcolor "#c8c8d0"
 set recolor-lightcolor "#0e0e12"
