@@ -1,10 +1,9 @@
-{ pkgs, inputs, lib, ... }:
+{ pkgs, ... }:
 
 {
   environment.systemPackages = with pkgs; [
     # tools
     wget
-    git
     direnv
     tmux
   ];

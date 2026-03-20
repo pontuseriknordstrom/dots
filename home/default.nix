@@ -14,6 +14,12 @@
     "starship.toml".source = ../dots/starship/starship.toml;
   };
 
+  programs.git = {
+    enable = true;
+    userName = "pontus";
+    userEmail = "pontus@fastmail.org";
+  };
+
   home.packages = with pkgs; [
     # editor & terminal
     helix
