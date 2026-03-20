@@ -10,6 +10,7 @@
     ./modules/services.nix
     ./modules/packages.nix
     ./modules/fonts.nix
+    ./modules/gaming.nix
   ];
 
   # locale
