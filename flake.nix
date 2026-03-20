@@ -13,6 +13,12 @@
       url = "github:nix-community/lanzaboote/v1.0.0";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    helium = {
+      url = "github:AlvaroParker/helium-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    
   };
 
   outputs = { nixpkgs, home-manager, lanzaboote, ... }@inputs: {

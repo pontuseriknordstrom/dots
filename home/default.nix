@@ -4,7 +4,7 @@
   home.username = "tux";
   home.homeDirectory = "/home/tux";
 
-  # Symlink dotfiles into ~/.config/
+  # symlink dotfiles into ~/.config/
   xdg.configFile = {
     "helix".source = ../dots/helix;
     "foot".source = ../dots/foot;
@@ -12,25 +12,26 @@
     "starship.toml".source = ../dots/starship/starship.toml;
   };
 
-  # Fonts
+  # fonts
   fonts.fontconfig.enable = true;
 
-  # User packages
+  # user packages
   home.packages = with pkgs; [
-    # Editor & terminal
+    # editor & terminal
     helix
     foot
     tmux
 
-    # Shell
+    # shell
     fish
     starship
     
-    # Apps
+    # apps
     _1password-gui
     vesktop
+    inputs.helium.packages.${pkgs.system}.default
 
-    # Fonts
+    # fonts
     iosevka-bin
   ];
 
