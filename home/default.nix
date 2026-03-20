@@ -7,41 +7,13 @@
   # Symlink dotfiles into ~/.config/
   xdg.configFile = {
     "helix".source = ../dots/helix;
-    "hypr".source = ../dots/hyprland;
-    "waybar".source = ../dots/waybar;
-    "fuzzel".source = ../dots/fuzzel;
-    "mako".source = ../dots/mako;
     "foot".source = ../dots/foot;
     "fish/config.fish".source = ../dots/fish/config.fish;
     "starship.toml".source = ../dots/starship/starship.toml;
-    "zathura".source = ../dots/zathura;
   };
 
   # Fonts
   fonts.fontconfig.enable = true;
-
-  # Cursor
-  home.pointerCursor = {
-    name = "Bibata-Modern-Classic";
-    package = pkgs.bibata-cursors;
-    size = 24;
-    gtk.enable = true;
-  };
-
-  # Default to dark mode
-  gtk = {
-    enable = true;
-    theme = {
-      name = "Adwaita-dark";
-      package = pkgs.gnome-themes-extra;
-    };
-  };
-
-  dconf.settings = {
-    "org/gnome/desktop/interface" = {
-      color-scheme = "prefer-dark";
-    };
-  };
 
   # User packages
   home.packages = with pkgs; [
@@ -50,42 +22,16 @@
     foot
     tmux
 
-    # File manager
-    nautilus
-
     # Shell
     fish
     starship
-
-    # Media
-    zathura
-    imv
-    mpv
     
     # Apps
     _1password-gui
     vesktop
 
-    # Bar / Launcher / Notifications
-    waybar
-    fuzzel
-    mako
-    libnotify
+    # Fonts
     iosevka-bin
-
-    # Hyprland utilities
-    brightnessctl
-    playerctl
-    grim
-    slurp
-    wl-clipboard
-
-    # Hyprland extras
-    hyprlock
-    hyprpicker
-
-    # Browser
-    librewolf
   ];
 
   home.stateVersion = "25.11";
