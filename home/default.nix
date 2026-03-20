@@ -20,7 +20,6 @@
     # editor & terminal
     helix
     foot
-    tmux
 
     # shell prompt
     starship

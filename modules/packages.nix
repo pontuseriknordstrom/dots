@@ -6,5 +6,6 @@
     wget
     git
     direnv
+    tmux
   ];
 }
