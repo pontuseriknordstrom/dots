@@ -9,6 +9,7 @@
     ./modules/desktop.nix
     ./modules/services.nix
     ./modules/packages.nix
+    ./modules/fonts.nix
   ];
 
   # locale

@@ -1,6 +1,8 @@
 { pkgs, inputs, ... }:
 
 {
+  imports = [ ./plasma.nix ];
+  
   home.username = "tux";
   home.homeDirectory = "/home/tux";
 
@@ -12,10 +14,6 @@
     "starship.toml".source = ../dots/starship/starship.toml;
   };
 
-  # fonts
-  fonts.fontconfig.enable = true;
-
-  # user packages
   home.packages = with pkgs; [
     # editor & terminal
     helix
@@ -28,9 +26,6 @@
     _1password-gui
     vesktop
     inputs.helium.packages.${pkgs.system}.default
-
-    # fonts
-    iosevka-bin
   ];
 
   home.stateVersion = "25.11";
