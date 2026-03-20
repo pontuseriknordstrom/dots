@@ -27,6 +27,9 @@
   programs.fish.enable = true;
   users.users.tux.shell = pkgs.fish;
 
+  # enable swap on zram
+  zramSwap.enable = true;
+
   # nix settings
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.allowUnfree = true;
