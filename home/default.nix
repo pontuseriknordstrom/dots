@@ -22,8 +22,7 @@
     foot
     tmux
 
-    # shell
-    fish
+    # shell prompt
     starship
     
     # apps
