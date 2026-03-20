@@ -14,12 +14,6 @@
     "starship.toml".source = ../dots/starship/starship.toml;
   };
 
-  programs.git = {
-    enable = true;
-    userName = "pontus";
-    userEmail = "pontus@fastmail.org";
-  };
-
   home.packages = with pkgs; [
     # editor & terminal
     helix
@@ -37,6 +31,22 @@
     vanilla-dmz
   ];
 
+  # setup git
+  programs.git = {
+    enable = true;
+    userName = "pontus";
+    userEmail = "pontus@fastmail.org";
+  };
+
+  # needs to be changed in plasma.nix too
+  home.pointerCursor = {
+    name = "Vanilla-DMZ";
+    size = 32;
+    package = pkgs.vanilla-dmz;
+    gtk.enable = true;
+    x11.enable = true;
+  };
+  
   home.stateVersion = "25.11";
   programs.home-manager.enable = true;
 }
