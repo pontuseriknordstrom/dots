@@ -4,7 +4,11 @@
   programs.plasma = {
     enable = true;
 
-    # we can set themes, cursors, etc in this file
+    # set cursor
+    workspace.cursor = {
+      theme = "Vanilla-DMZ";
+      size = 32;
+    };
 
     # set fonts
     fonts = {

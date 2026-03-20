@@ -26,6 +26,9 @@
     _1password-gui
     vesktop
     inputs.helium.packages.${pkgs.system}.default
+
+    # cursor
+    vanilla-dmz
   ];
 
   home.stateVersion = "25.11";
