@@ -4,6 +4,12 @@
   programs.plasma = {
     enable = true;
 
+    # keyboard rate
+    input.keyboard = {
+      repeatDelay = 200;
+      repeatRate = 50.0;
+    };
+
     # set cursor
     workspace.cursor = {
       theme = "Vanilla-DMZ";
