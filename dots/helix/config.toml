@@ -1,4 +1,4 @@
-theme = "ayu_evolve"
+theme = "base16_terminal"
 
 [editor]
 line-number = "relative"
