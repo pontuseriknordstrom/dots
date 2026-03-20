@@ -1,13 +1,12 @@
-# No greeting
+# disable greeting
 set -g fish_greeting
 
-# Environment
+# environment
 set -gx EDITOR helix
 set -gx VISUAL helix
 set -gx TERMINAL foot
 
-# Aliases
-alias ll "ls -la"
+# aliases
 alias l "ls -la"
 alias g git
 alias gs "git status"
@@ -17,9 +16,10 @@ alias ga "git add"
 alias gd "git diff"
 alias rebuild "cd ~/Dotfiles && git add -A && sudo nixos-rebuild switch --flake .#descartes"
 alias cleanup "sudo nix-collect-garbage -d"
+alias update "sudo nix flake update"
 
-# Starship prompt
+# starship prompt
 starship init fish | source
 
-# Direnv
+# direnv
 direnv hook fish | source
