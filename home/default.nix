@@ -29,6 +29,9 @@
 
     # cursor
     vanilla-dmz
+
+    # video player
+    mpv
   ];
 
   # setup git
