@@ -1,8 +1,6 @@
 { pkgs, inputs, ... }:
 
 {
-  imports = [ ./plasma.nix ];
-  
   home.username = "tux";
   home.homeDirectory = "/home/tux";
 
@@ -39,15 +37,6 @@
     enable = true;
     userName = "pontus";
     userEmail = "pontus@fastmail.org";
-  };
-
-  # needs to be changed in plasma.nix too
-  home.pointerCursor = {
-    name = "Vanilla-DMZ";
-    size = 32;
-    package = pkgs.vanilla-dmz;
-    gtk.enable = true;
-    x11.enable = true;
   };
   
   home.stateVersion = "25.11";
