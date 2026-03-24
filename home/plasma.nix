@@ -4,6 +4,12 @@
   programs.plasma = {
     enable = true;
 
+    # set dark mode
+    workspace = {
+      theme = "breeze-dark";
+      colorScheme = "BreezeDark";
+    };
+
     # keyboard rate
     input.keyboard = {
       repeatDelay = 200;
