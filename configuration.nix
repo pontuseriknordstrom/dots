@@ -34,5 +34,11 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.allowUnfree = true;
 
+  # enable appimages
+  programs.appimage = {
+    enable = true;
+    binfmt = true;
+  };
+  
   system.stateVersion = "25.11";
 }
