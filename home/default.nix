@@ -27,11 +27,6 @@
 
     # cursor
     vanilla-dmz
-
-    # fl studio
-    bottles
-    wineWow64Packages.staging
-    winetricks
   ];
 
   # setup git
