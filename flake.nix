@@ -18,12 +18,6 @@
       url = "github:AlvaroParker/helium-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    plasma-manager = {
-      url = "github:nix-community/plasma-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.home-manager.follows = "home-manager";
-    };
   };
 
   outputs = { nixpkgs, home-manager, lanzaboote, ... }@inputs: {
@@ -40,7 +34,6 @@
           home-manager.extraSpecialArgs = { inherit inputs; };
           home-manager.users.tux = {
             imports = [
-              inputs.plasma-manager.homeManagerModules.plasma-manager
               ./home
             ];
           };

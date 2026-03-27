@@ -32,9 +32,6 @@
     userName = "pontus";
     userEmail = "pontus@fastmail.org";
   };
-
-  # lets home-manager configure gnome settings
-  programs.dconf.enable = true;
   
   home.stateVersion = "25.11";
   programs.home-manager.enable = true;
