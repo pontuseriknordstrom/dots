@@ -36,9 +36,6 @@
   # zram swap
   zramSwap.enable = true;
 
-  # flatpak
-  services.flatpak.enable = true;
-
   # nix settings
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.allowUnfree = true;

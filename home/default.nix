@@ -23,6 +23,7 @@
     _1password-gui
     vesktop
     inputs.helium.packages.${pkgs.system}.default
+    mpv
   ];
 
   programs.git = {
