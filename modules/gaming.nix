@@ -1,0 +1,15 @@
+{ pkgs, ... }:
+
+{
+  programs.steam = {
+    enable = true;
+    dedicatedServer.openFirewall = true;
+    remotePlay.openFirewall = true;
+  };
+
+  # 32-bit graphics support for Steam/Proton
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+  };
+}
