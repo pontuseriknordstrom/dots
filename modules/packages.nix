@@ -18,6 +18,9 @@
 
     # pw manager 
     pkgs._1password-gui
+
+    # music
+    pkgs.spotify
   ];
 
   fonts.packages = [
