@@ -42,5 +42,7 @@
 
   nixpkgs.config.allowUnfree = true;
 
+  zramSwap.enable = true;
+  
   system.stateVersion = "25.11";
 }
