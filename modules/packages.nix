@@ -24,10 +24,14 @@
 
     # note taking
     pkgs.obsidian
+
+    # editor
+    pkgs.helix
   ];
 
   fonts.packages = [
     pkgs.noto-fonts-cjk-serif
     pkgs.noto-fonts-cjk-sans
+    pkgs.nerd-fonts.iosevka
   ];
 }
