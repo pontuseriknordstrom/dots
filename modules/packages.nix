@@ -3,7 +3,7 @@
 {
   environment.systemPackages = [
     # editor
-    pkgs.helix
+    pkgs.neovim
 
     # CLI tools
     pkgs.wget
@@ -24,6 +24,9 @@
 
     # pdf
     pkgs.zathura
+
+    # note taking
+    pkgs.emacs
   ];
 
   fonts.packages = [
